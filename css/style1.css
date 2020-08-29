@@ -269,6 +269,10 @@ h1 span{
     border-radius: 100px;
 }
 
+.Count:after{
+    content:"%"
+  }
+
 
 @keyframes animate{
     

@@ -13,7 +13,7 @@ var offsetTop = $('#sekils').offset().top;
             jQuery('.skillbar').each(function(){
                 jQuery(this).find('.skillbar-bar').animate({
                     width:jQuery(this).attr('data-percent')
-                },4000);
+                },2000);
             });
         } 
 });
@@ -22,10 +22,30 @@ var offsetTop = $('#sekils').offset().top;
 jQuery('.Count').each(function () {
     var $this = $(this);
     jQuery({ Counter: 0}).animate({ Counter: $this.text() }, {
-      duration: 4000,
+      duration: 2000,
       easing: 'swing',
       step: function () {
         $this.text(Math.ceil(this.Counter));
       }
     });
   }); 
+
+
+$(function(){
+    $('.copyright').fadeIn('slow');
+});
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        $('.hideme').each(function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if(bottom_of_window > bottom_of_object){
+                $(this).animate({'opacity': '1'}, 1500);
+            }else{
+                $(this).animate({'opacity': '0'}, 1500);
+            }
+        });
+    });
+});

@@ -105,71 +105,18 @@ textarea:-ms-input-placeholder{
     margin: 0;
 }
 
-
-.home_section{
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    background: #ebecec;
-    overflow: hidden;
-}
-
-section .wave{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url(../img/wave.png);
-    background-size: 1000px 100px;
-    
-}
-
-section .wave.wave1{
-    animation: animate 30s linear infinite;
-    z-index: 1000;
-    opacity: 1;
-    animation-delay: 0s;
-    bottom: 0;
-}
-
-section .wave.wave2{
-    animation: animate2 15s linear infinite;
-    z-index: 999;
-    opacity: 0.5;
-    animation-delay: -2s;
-    bottom: 10px;
-}
-
-section .wave.wave3{
-    animation: animate1 30s linear infinite;
-    z-index: 998;
-    opacity: 0.7;
-    animation-delay: 5s;
-    bottom: 15px;
-    
-}
-
-section .wave.wave4{
-    animation: animate2 5s linear infinite;
-    z-index: 997;
-    opacity: 0.5;
-    animation-delay: -5s;
-    bottom: 20px;
-}
-
 .hero_inner{
     width: 100%;
     height: 100vh;
     display: table;
 }
 .hero_content{
-    margin-top: 100px;
-    text-align: center;
+    margin-top: 190px;
+    text-align: left;
     color: #fff;
 }
 .hero_content h1.big_title {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 900;
     margin: 0 0 20px;
 }
@@ -178,7 +125,7 @@ section .wave.wave4{
 }
 
 h1 span{
-    color: #1272f0;
+    color: white;
 }
 
 .typed-cursor{
@@ -189,7 +136,7 @@ h1 span{
 }
 
 .default_btn{
-    background-color: #1272f0;
+    background-color: rgb(66, 76, 209);
     display: inline-block;
     vertical-align: middle;
     font-size: 14px;
@@ -197,9 +144,10 @@ h1 span{
     text-transform: uppercase;
     padding: 0 30px;
     color: #fff;
+    border-radius: 10px;
 }
 .default_btn:hover{
-    background-color: #1272f0;
+    background-color: rgb(75, 84, 219);
     color: #fff;
     text-decoration: none;
 }
@@ -212,8 +160,59 @@ h1 span{
     padding: 40px 0;
 }
 
-.skills_section{
+.edu_section{
     background-color: #f6f6f6; 
+}
+
+.image_img{
+    display: block;
+    /* width: 100%; */
+}
+
+.label{
+   color: white;
+   font-weight: bold;
+   position: absolute;
+   top: 37%;
+   left: 8%;
+   font-size: 15px;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.overlay {
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    /* #6c6ce4; */
+}
+
+.gallery-card:hover .overlay{
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+.overlayBottom{
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #966ce4da;
+}
+
+.container:hover .overlayBottom{
+    height: 40%;
+}
+
+.school_desc {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    font-size: 19px;
+    font-family: sans-serif;
+    /* text-align: center; */
 }
 
 .projects_section{
@@ -222,10 +221,15 @@ h1 span{
     background-attachment: fixed;
 }
 
+
 .gallery-card{
     border-radius: 20px;
     border: 0;
     box-shadow: 1px 1px 10px 5px #f5f4f9;
+}
+
+.skills_section{
+    background-color: #f6f6f6; 
 }
 
 .skillbar {
@@ -309,44 +313,6 @@ h1 span{
 .footer_social li a:hover{
     color: #ffc327;
 }
-
-
-@keyframes animate{
-    
-    0%{
-        background-position-x: 0;
-    }
-    100%{
-        background-position-x: 1000px;
-    }
-}
-
-@keyframes animate2{
-    
-    0%{
-        background-position-x: 0;
-    }
-    100%{
-        background-position-x: -1000px;
-    }
-}
-
-@keyframes animate3{
-    
-    0%{
-        background-position-x: 0;
-    }
-    100%{
-        background-position-x: -1000px;
-    }
-}
-
-@keyframes animate4{
-    
-    0%{
-        background-position-x: 0;
-    }
-    100%{
-        background-position-x: -1000px;
-    }
+.hideme{
+    opacity: 0;
 }
